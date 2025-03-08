@@ -1,0 +1,185 @@
+@font-face {
+    font-family: l;
+    src: url(COMM\ -\ Lyon\ Arabic\ Display\ Light.otf);
+}
+
+@font-face {
+    font-family: r;
+    src: url(COMM\ -\ Lyon\ Arabic\ Display\ Regular.otf);
+}
+
+@font-face {
+    font-family: m;
+    src: url(COMM\ -\ Lyon\ Arabic\ Display\ Medium.otf);
+}
+
+@font-face {
+    font-family: b;
+    src: url(COMM\ -\ Lyon\ Arabic\ Display\ Bold.otf);
+}
+
+@font-face {
+    font-family: bb;
+    src: url(COMM\ -\ Lyon\ Arabic\ Display\ Black.otf);
+}
+
+* {
+    font-family: b;
+}
+
+body {
+    text-align: center;
+    background-image: url('BG.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 20px;
+}
+
+.card {
+    background-color: hsla(0, 0%, 100%, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5vw;
+    padding: 25px 0px;
+}
+
+img {
+    width: 300px;
+}
+
+h2 {
+    color: #462461;
+    font-family: b;
+}
+
+#avatar-container {
+    position: relative;
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+#avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: none;
+}
+
+#frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+#download-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #462461;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#download-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.cropper-container {
+    margin: 20px 0px;
+    width: 300px;
+    height: 300px;
+}
+
+.cropper-view-box,
+.cropper-face {
+    border-radius: 50%;
+}
+
+.cropper-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+}
+
+.cropper-container p {
+    font-size: 18px;
+    color: #555;
+    text-align: center;
+    margin: 0;
+}
+
+.cropper-container {
+    cursor: pointer;
+    position: relative;
+}
+
+.cropper-container input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* الخلفية الشبه شفافة */
+#overlay {
+    display: none; /* مخفي بشكل افتراضي */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* خلفية سوداء شبه شفافة */
+    z-index: 999; /* تأكد من أنها تحت البوب أب */
+}
+
+/* نافذة البوب أب */
+#share-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* تأكد من أنها فوق الخلفية */
+}
+
+#share-popup h3 {
+    margin-bottom: 15px;
+    color: #462461;
+}
+
+#share-popup button {
+    display: block;
+    margin: 5px auto;
+    padding: 10px 20px;
+    background-color: #462461;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#share-popup button:hover {
+    background-color: #5a2d7d;
+}

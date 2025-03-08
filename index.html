@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نادي أدِيب</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+        <img src="logo.png" alt="">
+        <h2> أضف صورتك وكنت جزءًا من الحدث🖼️✨ </h2>
+
+        <div id="cropper-container" class="cropper-container">
+            <p> انقر لتحميل الصورة </p>
+            <input type="file" id="avatar-upload" accept="image/*">
+        </div>
+        <div id="avatar-container">
+            <img id="avatar" src="" alt="الأفتار">
+            <img id="frame" src="frame.png" alt="الإطار"> <!-- هنا ضع رابط صورة الإطار -->
+        </div>
+
+        <button id="download-btn" disabled>حفظ الأفتار</button>
+    </div>
+
+    <!-- الخلفية الشبه شفافة -->
+    <div id="overlay"></div>
+
+    <!-- نافذة المشاركة -->
+    <div id="share-popup">
+        <h3> شاركنا حُلتك على منصات التواصل الاجتماعي🙂‍↔️✨ </h3>
+        <button id="share-twitter">منصة أكس</button>
+        <button id="share-instagram">منصة انستغرام</button>
+        <button id="close-popup">إغلاق</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
