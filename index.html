@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+=<!DOCTYPE html>
 <html lang="ar">
 <head>
     <meta charset="UTF-8">
@@ -21,7 +21,7 @@
 
         <div id="cropper-container" class="cropper-container">
             <p> انقر لتحميل الصورة </p>
-            <input type="file" id="avatar-upload" accept="image/*" capture="environment">
+            <input type="file" id="avatar-upload" accept="image/*">
         </div>
         <div id="avatar-container">
             <img id="avatar" src="" alt="الأفتار">
@@ -37,9 +37,9 @@
     <!-- نافذة المشاركة -->
     <div id="share-popup">
         <h3> شاركنا حُلتك على منصات التواصل الاجتماعي🙂‍↔️✨ </h3>
-        <button id="share-twitter">منصة أكس</button>
-        <button id="share-instagram">منصة انستغرام</button>
-        <button id="close-popup">إغلاق</button>
+        <button onclick="shareOnTwitter()">مشاركة على تويتر</button>
+        <button onclick="shareOnInstagram()">مشاركة على إنستغرام</button>
+        <button onclick="closeSharePopup()">إغلاق</button>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
